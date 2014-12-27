@@ -11,6 +11,7 @@ class GeocodeQuery:
         url = self.url + '&address={}'.format(addr)
         response = urllib2.urlopen(url)
         self.jsonResponse = json.loads(response.read())
+        return self.jsonResponse
         
     def get_lat(self):
         if len(self.jsonResponse["results"]) is not 0:
