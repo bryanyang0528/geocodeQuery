@@ -6,6 +6,8 @@ You can get the imformation of geocode easily using this module.
 This module is a wrapper of `google geocode api`
 (https://developers.google.com/maps/documentation/geocoding/#GeocodingRequests)
 
+**Geocoding** is the process of converting addresses *(like "1600 Amphitheatre Parkway, Mountain View, CA")* into geographic coordinates *(like latitude 37.423021 and longitude -122.083739)*, which you can use to place markers or position the map.
+
 ##Object
 geocodequery.**GeocodeQuery(*language*, *region*)**
  Only class for query geocode, have two parameters.
@@ -48,6 +50,11 @@ Not all nations exhibit these administrative levels.
 `return` - return a third-order civil entity below the country level. 
 This type indicates a minor civil division. Not all nations exhibit these 
 administrative levels.
+
+##Usage Limits
+Users of the free API:
+* **2,500** requests per 24 hour period.
+* 5 requests per second.
 
 ##Examples
 
