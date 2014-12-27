@@ -21,7 +21,7 @@ geocodequery.**GeocodeQuery(*language*, *region*)**
 
 ##Functions
 
-* get_geocode(*address*)
+* **get_geocode**(*address*)
 
 `address` - The street address that you want to geocode, in the format used by the national
 postal service of the country concerned. Additional address elements such as business names
@@ -29,21 +29,21 @@ and unit, suite or floor numbers should be avoided.
 
 `return` - nothing
 
-* get_lat()
+* **get_lat()**
 
 `return` - return the geocoded latitude value
 
-* get_lng()
+* **get_lng()**
 
 `return` - return the geocoded longitude value
 
-* get_cuntry()(相當於縣市等級)
+* **get_cuntry()** *（相當於縣市等級）*
 
 `return` - return a second-order civil entity below the country level. 
 Within the United States, these administrative levels are counties. 
 Not all nations exhibit these administrative levels.
 
-* get_area()（相當於行政區等級）
+* **get_area()** *（相當於行政區等級）*
 
 `return` - return a third-order civil entity below the country level. 
 This type indicates a minor civil division. Not all nations exhibit these 
