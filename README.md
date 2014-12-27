@@ -37,13 +37,13 @@ and unit, suite or floor numbers should be avoided.
 
 `return` - return the geocoded longitude value
 
-* get_cuntry()
+* get_cuntry()(相當於縣市等級)
 
 `return` - return a second-order civil entity below the country level. 
 Within the United States, these administrative levels are counties. 
 Not all nations exhibit these administrative levels.
 
-* get_area()
+* get_area()（相當於行政區等級）
 
 `return` - return a third-order civil entity below the country level. 
 This type indicates a minor civil division. Not all nations exhibit these 
