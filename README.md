@@ -66,7 +66,7 @@ gq.get_geocode(addr)
 gq.get_lat()
 ```
 
-## reverse query
+## Reverse query
 Now you can query address by passing lat and lng!
 It's from [google API](https://developers.google.com/maps/documentation/geocoding/#ReverseGeocoding)
 
