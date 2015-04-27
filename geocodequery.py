@@ -1,3 +1,4 @@
+import sys
 import urllib, urllib2
 import json
 
@@ -30,7 +31,7 @@ class GeocodeQuery:
             return self.jsonResponse["results"][0]["address_components"][3]["long_name"]
 
 class GeocodeQueryReverse:
-    def __init__(self, lat =None, lng = None, language='en', region=None):
+    def __init__(self, lat =None, lng = None, language='en'):
         url = 'https://maps.googleapis.com/maps/api/geocode/json?latlng={0},{1}&language={2}'.format(lat, lng, language)
         response = urllib2.urlopen(url)
         self.jsonResponse = json.loads(response.read())
@@ -40,4 +41,13 @@ class GeocodeQueryReverse:
             for item in self.jsonResponse["results"][0]["address_components"]:
                 if item["types"][0] == "country":
                     return item["long_name"]
+
+if __name__ == '__main__':
+    if (len(sys.argv) != 5):
+        print 'usage: geocodeQuery.py [reverse] [lat] [lng] [country/addr]'
+        sys.exit(1)
+
+    if (sys.argv[1] == 'reverse' and sys.argv[4] == 'country'):
+        gqr = GeocodeQueryReverse(sys.argv[2],sys.argv[3])
+        print gqr.get_country()
 
