@@ -65,3 +65,24 @@ addr = "台北市館前路一段一號"
 gq.get_geocode(addr)
 gq.get_lat()
 ```
+
+## reverse query
+Now you can query address by passing lat and lng!
+It's from [google API](https://developers.google.com/maps/documentation/geocoding/#ReverseGeocoding)
+
+**but I only implement query country function lol**
+
+##Example
+```python
+#in python
+from geocodequery import GeocodeQueryReverse
+gqr = GeocodeQueryReverse(40.714224,-73.961452)
+gqr.get_country() #United States
+```
+```shell
+#you can query country in the command line
+# python geocodequery.py [reverse] [lat] [lng] [country]
+$ python geocodequery.py reverse 30.060797 130.530725 country
+Japan
+```
+
