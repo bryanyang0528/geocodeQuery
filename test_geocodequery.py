@@ -28,3 +28,8 @@ class TestGeocodeQuery(unittest2.TestCase):
 		gq = self._makeOne()
 		gq.get_geocode("")
 		self.assertEqual(gq.jsonResponse['results'], [])
+
+	def test_get_country(self):
+		from geocodequery import GeocodeQueryReverse
+		gqr = GeocodeQueryReverse(40.714224,-73.961452)
+		self.assertEqual(gqr.get_country(), "United States")
